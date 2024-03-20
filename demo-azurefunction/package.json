@@ -13,7 +13,7 @@
   "dependencies": {
     "@azure/functions": "^3.0.0",
     "@types/dotenv-safe": "^8.1.2",
-    "@types/node": "^16.x",
+    "@types/node": "^16.18.70",
     "@types/uuid": "^9.0.0",
     "chatgpt": "^5.0.0",
     "chatgpt-prompts": "^3.0.0",
