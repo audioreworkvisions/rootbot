@@ -8,6 +8,7 @@ using Microsoft.Bot.Builder.Dialogs.Adaptive.Runtime.Settings;
 using Microsoft.Bot.Builder.Integration.AspNet.Core;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Microsoft.Bot.Builder.Teams; // Added for Teams integration
 
 namespace Empty.Controllers
 {
@@ -41,6 +42,13 @@ namespace Empty.Controllers
                 {
                     _adapters.Add(settings.Route, adapter);
                 }
+            }
+
+            // Teams integration configuration
+            var teamsAdapter = adapters.OfType<TeamsBotFrameworkHttpAdapter>().FirstOrDefault();
+            if (teamsAdapter != null)
+            {
+                _adapters.Add("teams", teamsAdapter);
             }
         }
 

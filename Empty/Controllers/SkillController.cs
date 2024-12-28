@@ -5,6 +5,7 @@ using Microsoft.Bot.Builder;
 using Microsoft.Bot.Builder.Integration.AspNet.Core;
 using Microsoft.Bot.Schema;
 using Microsoft.Extensions.Logging;
+using Microsoft.Bot.Builder.Teams; // Added for Teams integration
 
 namespace Empty.Controllers
 {
@@ -32,6 +33,12 @@ namespace Empty.Controllers
                     _logger.LogDebug($"ReplyToActivityAsync: conversationId={conversationId}, activityId={activityId}");
                 }
 
+                // Handle Teams-specific requests
+                if (activity.ChannelId == "msteams")
+                {
+                    // Add any Teams-specific logic here
+                }
+
                 return base.ReplyToActivityAsync(conversationId, activityId, activity);
             }
             catch (Exception ex)
@@ -48,6 +55,12 @@ namespace Empty.Controllers
                 if (_logger.IsEnabled(LogLevel.Debug))
                 {
                     _logger.LogDebug($"SendToConversationAsync: conversationId={conversationId}");
+                }
+
+                // Handle Teams-specific requests
+                if (activity.ChannelId == "msteams")
+                {
+                    // Add any Teams-specific logic here
                 }
 
                 return base.SendToConversationAsync(conversationId, activity);
