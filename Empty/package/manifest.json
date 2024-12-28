@@ -2,18 +2,18 @@
     "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.15/MicrosoftTeams.schema.json",
     "version": "1.7.0",
     "manifestVersion": "1.15",
-    "id": "<<your teams app id>>",
+    "id": "Pdb55",
     "packageName": "com.package.name",
     "name": {
         "short": "rootbot02",
         "full": "root bot 02"
     },
     "developer": {
-        "name": "Contoso",
-        "mpnId": "",
-        "websiteUrl": "https://www.contoso.com",
-        "privacyUrl": "https://www.contoso.com/privacy",
-        "termsOfUseUrl": "https://www.contoso.com/terms"
+        "name": "Your Name",
+        "mpnId": "123456",
+        "websiteUrl": "https://www.yourwebsite.com",
+        "privacyUrl": "https://www.yourwebsite.com/privacy",
+        "termsOfUseUrl": "https://www.yourwebsite.com/terms"
     },
     "description": {
         "short": "root bot sample",
@@ -26,7 +26,7 @@
     "accentColor": "#FFFFFF",
     "bots": [
         {
-            "botId": "<<your bot app id in AAD>>",
+            "botId": "Pea17",
             "scopes": [
                 "personal",
                 "team",
@@ -40,7 +40,7 @@
     ],
     "composeExtensions": [
         {
-            "botId": "<<your bot app id in AAD>>",
+            "botId": "Pea17",
             "commands": [
                 {
                     "id": "AskChatGPT",
@@ -156,7 +156,7 @@
         "*.blob.core.windows.net"        
     ],
     "webApplicationInfo": {
-        "id": "<<your bot app id in AAD>>",
+        "id": "Pea17",
         "resource": ""
     }
 }
